@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мисс 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function openModal(name) {
+      document.getElementById('modal-' + name).style.display = 'block';
+    }
+  
+    function closeModal(name) {
+      document.getElementById('modal-' + name).style.display = 'none';
+    }
+  
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+  </script>
+  <script>
+    function setVhUnit() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setVhUnit();
+    window.addEventListener('resize', setVhUnit);
+  </script>
+<body>
+
+  <!-- Верхняя комната -->
+  
+    <section class="house-section">
+        <h1 class="title">Мисс ИБ 2025</h1>
+      
+        <div class="house-wrapper">
+
+          <div class="girl-wrapper">
+            <video 
+              class="girl" 
+              autoplay 
+              muted 
+              loop 
+              playsinline 
+              aria-label="Анимированная девочка"
+            >
+              <source src="assets/video/girl.webm" type="video/webm">
+              <source src="assets/video/girl.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+          </div>
+            <img src="assets/images/house.png" alt="Дом" class="house">
+          
+              <div class="house-grid">
+                <div class="room"><img src="assets/images/doll4.2.png" class="doll" onclick="openModal('polina')"></div>
+                <div class="room"><img src="assets/images/doll5.1.png" class="doll" onclick="openModal('dasha')"></div>
+                <div class="room"><img src="assets/images/doll3.2.png" class="doll" onclick="openModal('natasha')"></div>
+                <div class="room"><img src="assets/images/doll6.3.png" class="doll" onclick="openModal('yulia')"></div>
+                <div class="room"><img src="assets/images/doll1.2.png" class="doll" onclick="openModal('liza')"></div>
+                <div class="room"><img src="assets/images/doll2.1.png" class="doll" onclick="openModal('meline')"></div>
+              </div>
+            </div>
+  </section> 
+<!-- Модальные окна -->
+<div id="modal-polina" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('polina')">&times;</span>
+    <h2>Полина Разахатская</h2>
+    <p>«Гадалка — это не просто образ, это способ показать, что в каждом из нас есть немного магии. Я здесь, чтобы напомнить всем, что мечты могут сбываться, если немного поворожить над ними»</p>
+    <div class="photos">
+      <img src="assets/images/polina1.JPG" alt="Полина фото 1">
+      <img src="assets/images/polina2.PNG" alt="Полина фото 2">
+    </div>
+  </div>
+</div>
+  
+  <div id="modal-dasha" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('dasha')">&times;</span>
+    <h2>Даша Лемешкова</h2>
+    <p>«Я выбрала барби, потому что она воплощает мечты и амбиции, демонстрируя, что девушки могут быть кем угодно: от певицы до астронавта. Она — добрая, целеустремленная и отзывчивая — этим мы и похожи»
+</p>
+    <div class="photos">
+      <img src="assets/images/dasha1.jpg" alt="Даша фото 1">
+      <img src="assets/images/dasha2.PNG" alt="Даша фото 2">
+    </div>
+  </div>
+</div>
+
+  
+  <div id="modal-natasha" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('natasha')">&times;</span>
+    <h2>Наташа Крымская</h2>
+    <p>«Я выбрала такую куклу, потому что в ней живёт дух мистической красоты. Эмили — «живой» пример того, что Тим Бёртон мастерски превращает мрачные истории в произведения, полные очарования»</p>
+    <div class="photos">
+      <img src="assets/images/natasha1.JPG" alt="Наташа фото 1">
+      <img src="assets/images/natasha2.PNG" alt="Наташа фото 2">
+    </div>
+  </div>
+</div>
+
+  
+  <div id="modal-yulia" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('yulia')">&times;</span>
+    <h2>Юля Гесь</h2>
+    <p>«Светить румянцем на щеках, хлопать ресницами и взлетать, заводить хороводы и каждый день открывать в себе что-то новое - выбор настоящей матрёшки. На сцене я вам полностью раскроюсь и вы узнаете что же хранит в себе заводная матрёшка Юля Гесь»</p>
+    <div class="photos">
+      <img src="assets/images/yulia1.JPG" alt="Юля фото 1">
+      <img src="assets/images/yulia2.PNG" alt="Юля фото 2">
+    </div>
+  </div>
+</div>
+
+  
+  <div id="modal-liza" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('liza')">&times;</span>
+    <h2>Лиза Журавлева</h2>
+    <p>«Я выбрала марионетку, потому что эта кукла — больше, чем просто ниточки и дерево. Это совокупность аутентичности, самобытности и изящности. В её каждом движении есть баланс между зависимостью и самовыражением, а в каждом взгляде — отражение того, что скрыто внутри нас.
+(ну и она просто немножко крэйзи:))»</p>
+    <div class="photos">
+      <img src="assets/images/liza1.JPG" alt="Лиза фото 1">
+      <img src="assets/images/liza2.PNG" alt="Лиза фото 2">
+    </div>
+  </div>
+</div>
+
+  
+ <div id="modal-meline" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('meline')">&times;</span>
+    <h2>Мелинэ Гулян</h2>
+    <p>«Я выбрала заводную балерину с ключом, потому что в её танце я вижу не просто движение механизма, а символ человеческого стремления к прекрасному, несмотря на ограничения. Она танцует, пока её механизм не иссякнет, как и мы двигаемся вперёд, пока внутри нас горит искра желания творить, любить, преодолевать»</p>
+    <div class="photos">
+      <img src="assets/images/meline1.JPG" alt="Мелинэ фото 1">
+      <img src="assets/images/meline2.JPEG" alt="Мелинэ фото 2">
+    </div>
+  </div>
+</div>
+  
+  <!-- Нижняя комната: мастерская -->
+  <section class="workshop-bg">
+    <!-- Контент мастерской здесь -->
+  </section>
+
+  <!-- Футер -->
+<footer>
+  <div class="footer-overlay">
+    <nav class="footer-content" aria-label="Социальные сети">
+      <a href="https://t.me/s/studprojectsb" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/telegram.svg" alt="Telegram" />
+      </a>
+      <a href="https://www.instagram.com/studactive.sb/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.youtube.com/@studactive_sb" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/youtube.svg" alt="Youtube" />
+      </a>
+      <a href="https://vk.com/studactive_sb" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/vk.svg" alt="Vk" />
+      </a>
+      <a href="https://www.tiktok.com/@studactive.sb" target="_blank" rel="noopener noreferrer">
+        <img src="assets/images/tiktok.svg" alt="TikTok" />
+      </a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+
